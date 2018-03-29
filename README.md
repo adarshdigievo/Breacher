@@ -10,7 +10,7 @@ A script to find admin login pages and EAR vulnerabilites. Supports multiple dom
 - [x] Support for custom patns
 
 ### Usages
--specify list of domains to scan in a file domainlist.txt. The output will be saved to output.txt.
+- specify list of domains to scan in a file domainlist.txt. The output will be saved to output.txt.
 
 - Check all paths with php extension
 ```
@@ -18,7 +18,7 @@ python breacher--type php
 ```
 - Check all paths with php extension with threads
 ```
-python breacher -u example.com --type php --fast
+python breacher --type php --fast
 ```
 - Check all paths without threads
 ```
