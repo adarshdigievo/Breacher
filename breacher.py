@@ -35,8 +35,10 @@ for line in fi:
             fo.write( "--------------------------------------------------------------------------\n")
 
     def scan(links):
-
+        sitescan=1
         for link in links: #fetches one link from the links list
+
+         try:
             link = target + link # Does this--> example.com/admin/
             print link
 
@@ -50,6 +52,13 @@ for line in fi:
                 fo.write( '----->>>Potential EAR vulnerability found : ' + link+'\n')
             else:
                 fo.write( '%s'% link+'\n')
+         except:
+             print 'site error'
+             sitescan=sitescan+1
+             if sitescan>5:
+                 return;
+
+
     paths = [] #list of paths
     def get_paths(type):
         try:
